@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Submit Roadside Attractions</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <style>
+      body {
+        padding-left: 2em;
+        font-family: Ubuntu;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Submit a roadside attraction</h1><br>
+    <form name="submit-roadside" netlify netlify-honeypot="timestamp">
+      <table>
+        <tr>
+          <td>
+            <p>
+              <label>Your name:</label><br>
+              <input type="text" name="submitter-name" required style="width: 15em;">
+            </p>
+            <p>
+          </td>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          <td>
+            <p>
+              <label>Your email:</label><br>
+              <input type="email" name="email" required style="width: 15em;">
+            </p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <p>
+        <label>Location of roadside attraction:<br>[City, street address or intersection, GPS coordinates if known.]</label><br>
+        <textarea name="location" required style="width: 35%;height: 3em;"></textarea>
+      </p><br>
+      <p>
+        <label>Other information:<br>
+        [Name of roadside attraction, description, creator, date of installation — any information]</label><br>
+        <textarea name="other-info" style="width: 35%;height: 4em;"></textarea>
+      </p><br>
+      <p>
+        <label>Picture(s):</label><br>
+        <input type="file" name="pic1" required>
+        <input type="file" name="pic2">
+        <input type="file" name="pic3">
+      </p><br>
+      <input name="timestamp" type="hidden" />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
